@@ -268,6 +268,7 @@ public class FormCalculator extends javax.swing.JFrame {
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         txtOpr1.setText("");
         txtOpr2.setText("");
+        lblHasil.setText("Hasil");
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConnectActionPerformed
