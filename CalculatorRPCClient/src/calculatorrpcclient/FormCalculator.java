@@ -5,6 +5,7 @@
  */
 package calculatorrpcclient;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -106,6 +107,12 @@ public class FormCalculator extends javax.swing.JFrame {
 
         jLabel2.setText("Masukan Port Koneksi");
 
+        txtPort.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPortKeyTyped(evt);
+            }
+        });
+
         btnConnect.setText("Connect");
         btnConnect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +123,18 @@ public class FormCalculator extends javax.swing.JFrame {
         jLabel3.setText("Operand 1");
 
         jLabel4.setText("Operand 2");
+
+        txtOpr1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtOpr1KeyTyped(evt);
+            }
+        });
+
+        txtOpr2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtOpr2KeyTyped(evt);
+            }
+        });
 
         btnAdd.setText("+");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -280,6 +299,24 @@ public class FormCalculator extends javax.swing.JFrame {
             connectServer();
         }
     }//GEN-LAST:event_btnConnectActionPerformed
+
+    private void txtPortKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPortKeyTyped
+        filterhuruf(evt);
+    }//GEN-LAST:event_txtPortKeyTyped
+
+    private void txtOpr1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOpr1KeyTyped
+       filterhuruf(evt);
+    }//GEN-LAST:event_txtOpr1KeyTyped
+
+    private void txtOpr2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOpr2KeyTyped
+       filterhuruf(evt);
+    }//GEN-LAST:event_txtOpr2KeyTyped
+    void filterhuruf(KeyEvent a) {
+        if (Character.isAlphabetic(a.getKeyChar())) {
+            a.consume();
+            JOptionPane.showMessageDialog(null, "Hanya Bisa Memasukan Karakter Angka");
+        }
+    }
 
     /**
      * @param args the command line arguments

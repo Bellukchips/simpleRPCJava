@@ -130,6 +130,9 @@
     <Component class="javax.swing.JTextField" name="txtIP">
     </Component>
     <Component class="javax.swing.JTextField" name="txtPort">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPortKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnConnect">
       <Properties>
@@ -150,8 +153,14 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOpr1">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtOpr1KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOpr2">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtOpr2KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAdd">
       <Properties>
